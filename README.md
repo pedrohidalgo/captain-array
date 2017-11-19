@@ -1,7 +1,7 @@
 Captain Array
 =
 
-A Javascript utility library to deal with Arrays and allows to combine operations. It is
+A Javascript utility library that works with Arrays chaining operations. It is
 inspired by the [Java Streams API](https://docs.oracle.com/javase/8/docs/api/?java/util/stream/Stream.html) but only
 works with arrays.
 
