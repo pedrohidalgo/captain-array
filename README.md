@@ -48,9 +48,5 @@ Current operations list:
 * [x] sortAsc
 * [x] sortDesc
 * [x] sum
-
-
-Probable functionality for the near future:
-
-* Functions related to [Java Optional](https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html)
-* TBD
+* [x] forEach
+* [x] range

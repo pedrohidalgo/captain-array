@@ -27,6 +27,16 @@ describe('Testing CaptainArray Generic functionality', () => {
     expect(resultArray.count()).toEqual(3);
   });
 
+  test('Testing forEach()', () => {
+    let currentTotal = 0;
+    new CaptainArray([1, 4, 5]).forEach(value => {
+      currentTotal = currentTotal + value;
+    });
+
+    logger.debug('currentTotal: ' + currentTotal);
+    expect(currentTotal).toEqual(10);
+  });
+
   test('Testing map()', () => {
     const resultArray =
       new CaptainArray([1, 4, 5, 7, 5, 4, 2]).map(n => n * 2);
@@ -88,6 +98,13 @@ describe('Testing CaptainArray Generic functionality', () => {
     expect(resultCapArray.toArray()).toEqual([0, 1, 2, 3]);
   });
 
+  test('Testing numberRange()', () => {
+    const resultCapArray = CaptainArray.numberRange(2, 8);
+
+    logger.debug('resultCapArray: ' + resultCapArray.toArray());
+    expect(resultCapArray.toArray()).toEqual([2, 3, 4, 5, 6, 7, 8]);
+  });
+
   test('Testing skip()', () => {
     const result = new CaptainArray([32, 'dfa', 'kkk', 'ppp', 48]).skip(3);
 
@@ -130,8 +147,7 @@ describe('Testing CaptainArray Generic functionality', () => {
 
   test('Testing combination with strings', () => {
     const result = new CaptainArray(['peter', 'jhon', 'michael', 'melvin']) // Initializing Array
-      .sortAsc()
-      .join(' - ');
+      .sortAsc().join(' - ');
 
     logger.debug('result: ' + result);
     expect(result).toEqual('jhon - melvin - michael - peter');

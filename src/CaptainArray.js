@@ -11,8 +11,6 @@ export default class CaptainArray {
 
   //Validations
   _validateArray() {
-    //TODO use _.isArray(something) to validate I received an array
-    //because it should be valid to pass an empty array
     if (!_.isArray(this._array)) {
       throw new InvalidArrayException('the provided value is not an array');
     }
@@ -32,6 +30,12 @@ export default class CaptainArray {
     }
   }
 
+  static numberRange(start, finish){
+    return new CaptainArray(
+      _.range(start, finish + 1)
+    );
+  }
+
   toArray() {
     return this._array;
   }
@@ -39,6 +43,12 @@ export default class CaptainArray {
   filter(exp) {
     return this._createNew(
       this._array.filter(exp),
+    );
+  }
+
+  forEach(func) {
+    return this._createNew(
+      _.forEach(this._array, func),
     );
   }
 

@@ -1,13 +1,20 @@
 {
   "name": "captain-array",
-  "version": "0.0.1",
+  "version": "0.1.2",
   "description": "Help execute useful operations in arrays",
-  "main": "index.js",
+  "main": "dist/src/CaptainArray.js",
   "scripts": {
     "test": "jest --config=jest.config.js Generic",
     "lint": "./node_modules/.bin/eslint ./"
   },
-  "author": "Pedro Hidalgo",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pedrohidalgo/captain-array.git"
+  },
+  "author": {
+    "name": "Pedro Hidalgo",
+    "email": "pedroantoniohidalgo@gmail.com"
+  },
   "license": "MIT",
   "dependencies": {
     "caterpillar": "^3.0.1",
